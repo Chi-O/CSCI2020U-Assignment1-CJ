@@ -25,4 +25,12 @@ public class Kitchen {
         this.hasDishwasher = hasDishwasher;
         this.hasMicrowave = hasMicrowave;
     }
+
+    public String getDishWasher() {
+        if (this.hasDishwasher) {
+            return "has a dish washer";
+        }
+
+        return "does not have a dishwasher";
+    }
 }

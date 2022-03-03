@@ -11,6 +11,9 @@ public class Architect {
         // original lengthy construction
         // Bedroom room = new Bedroom(new Dimension(300, 400), 100, 4, Color.magenta, 3, 1, true, true);
 
+        Kitchen kitchen = new KitchenBuilder().setDishWasher(true).createKitchen();
+
         System.out.println("This room is on floor number " + room.getFloorNumber() + ".");
+        System.out.println("This kitchen " + kitchen.getDishWasher() + ".");
     }
 }
