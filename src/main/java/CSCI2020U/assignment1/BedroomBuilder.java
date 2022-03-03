@@ -1,10 +1,9 @@
 package CSCI2020U.assignment1;
 
-import java.awt.Dimension;
-import java.awt.Color;
+import java.awt.*;
 
-// the Bedroom class is one of the complex products
-public class Bedroom {
+public class BedroomBuilder {
+
     // Bedroom attributes
     private Dimension dimensions; // Dimension object contains width and height
     private int ceilingHeight;
@@ -15,15 +14,40 @@ public class Bedroom {
     private boolean isDouble;
     private boolean hasEnsuite;
 
-    // original lengthy constructor
-    public Bedroom(Dimension dimensions, int ceilingHeight, int floorNumber, Color wallColor, int numberOfWindows, int numberOfDoors, boolean isDouble, boolean hasEnsuite) {
+    public BedroomBuilder(){
+
+    }
+
+    // Bedroom setter methods
+    public void setDimensions(Dimension dimensions) {
         this.dimensions = dimensions;
+    }
+
+    public void setCeilingHeight(int ceilingHeight) {
         this.ceilingHeight = ceilingHeight;
+    }
+
+    public void setFloorNumber(int floorNumber) {
         this.floorNumber = floorNumber;
+    }
+
+    public void setWallColor(Color wallColor) {
         this.wallColor = wallColor;
+    }
+
+    public void setNumberOfWindows(int numberOfWindows) {
         this.numberOfWindows = numberOfWindows;
+    }
+
+    public void setNumberOfDoors(int numberOfDoors) {
         this.numberOfDoors = numberOfDoors;
+    }
+
+    public void setDouble(boolean isDouble) {
         this.isDouble = isDouble;
+    }
+
+    public void setHasEnsuite(boolean hasEnsuite) {
         this.hasEnsuite = hasEnsuite;
     }
 }
