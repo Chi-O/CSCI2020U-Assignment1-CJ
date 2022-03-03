@@ -54,12 +54,14 @@ public class BedroomBuilder implements Builder{
         return this;
     }
 
-    public void setDouble(boolean isDouble) {
+    public BedroomBuilder setDouble(boolean isDouble) {
         this.isDouble = isDouble;
+        return this;
     }
 
-    public void setHasEnsuite(boolean hasEnsuite) {
+    public BedroomBuilder setHasEnsuite(boolean hasEnsuite) {
         this.hasEnsuite = hasEnsuite;
+        return this;
     }
 
     public Bedroom createBedroom() {

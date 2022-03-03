@@ -5,8 +5,12 @@ import java.awt.*;
 // the Architect class represents the director; it is used to make Bedroom objects
 public class Architect {
     public static void main(String[] args) {
-        Bedroom room = new Bedroom(new Dimension(300, 400), 100, 4, Color.magenta, 3, 1, true, true);
+        // new construction using Bedroom Builder
+        Bedroom room = new BedroomBuilder().setDimensions(new Dimension(300, 300)).setCeilingHeight(100).setFloorNumber(4).setWallColor(Color.magenta).setNumberOfWindows(3).setNumberOfDoors(1).setDouble(true).setHasEnsuite(true).createBedroom();
 
-        System.out.println(room);
+        // original lengthy construction
+        // Bedroom room = new Bedroom(new Dimension(300, 400), 100, 4, Color.magenta, 3, 1, true, true);
+
+        System.out.println("This room is on floor number " + room.getFloorNumber() + ".");
     }
 }

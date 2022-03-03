@@ -26,4 +26,8 @@ public class Bedroom {
         this.isDouble = isDouble;
         this.hasEnsuite = hasEnsuite;
     }
+
+    public int getFloorNumber() {
+        return floorNumber;
+    }
 }
