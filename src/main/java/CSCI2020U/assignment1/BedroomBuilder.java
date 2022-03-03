@@ -2,7 +2,7 @@ package CSCI2020U.assignment1;
 
 import java.awt.*;
 
-public class BedroomBuilder {
+public class BedroomBuilder implements Builder{
 
     // Bedroom attributes
     private Dimension dimensions; // Dimension object contains width and height
@@ -14,33 +14,44 @@ public class BedroomBuilder {
     private boolean isDouble;
     private boolean hasEnsuite;
 
-    public BedroomBuilder(){
-
+    public BedroomBuilder() {
     }
 
-    // Bedroom setter methods
-    public void setDimensions(Dimension dimensions) {
+    // implement and override setter methods from Builder interface
+    @Override
+    public BedroomBuilder setDimensions(Dimension dimensions) {
         this.dimensions = dimensions;
+        return this;
     }
 
-    public void setCeilingHeight(int ceilingHeight) {
+    @Override
+    public BedroomBuilder setCeilingHeight(int ceilingHeight) {
         this.ceilingHeight = ceilingHeight;
+        return this;
     }
 
-    public void setFloorNumber(int floorNumber) {
+    @Override
+    public BedroomBuilder setFloorNumber(int floorNumber) {
         this.floorNumber = floorNumber;
+        return this;
     }
 
-    public void setWallColor(Color wallColor) {
+    @Override
+    public BedroomBuilder setWallColor(Color wallColor) {
         this.wallColor = wallColor;
+        return this;
     }
 
-    public void setNumberOfWindows(int numberOfWindows) {
+    @Override
+    public BedroomBuilder setNumberOfWindows(int numberOfWindows) {
         this.numberOfWindows = numberOfWindows;
+        return this;
     }
 
-    public void setNumberOfDoors(int numberOfDoors) {
+    @Override
+    public BedroomBuilder setNumberOfDoors(int numberOfDoors) {
         this.numberOfDoors = numberOfDoors;
+        return this;
     }
 
     public void setDouble(boolean isDouble) {
@@ -49,5 +60,9 @@ public class BedroomBuilder {
 
     public void setHasEnsuite(boolean hasEnsuite) {
         this.hasEnsuite = hasEnsuite;
+    }
+
+    public Bedroom createBedroom() {
+        return new Bedroom(dimensions, ceilingHeight, floorNumber, wallColor, numberOfWindows, numberOfDoors, isDouble, hasEnsuite);
     }
 }
